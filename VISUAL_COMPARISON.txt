@@ -1,0 +1,199 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                    CONTROL MODE VISUAL COMPARISON                          ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 🎯 VELOCITY CONTROL (RATE) - RECOMMENDED FOR MARBLE BALANCING          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+What you do:                What platform does:
+
+Stick Center       →        Platform angle: STAYS at current angle
+  │                         (no change)
+  ├─── 0s: 15°
+  ├─── 1s: 15°
+  └─── 2s: 15°
+
+Stick Full Right   →        Platform angle: GRADUALLY increases
+  │                         (tilts more over time)
+  ├─── 0s: 0°
+  ├─── 1s: 30°  ← getting more tilted
+  └─── 2s: 60°  ← still tilting!
+
+Release to Center  →        Platform angle: STAYS where it was
+  │                         (holds current tilt)
+  ├─── 0s: 45°
+  ├─── 1s: 45°  ← stays put!
+  └─── 2s: 45°
+
+Nudge Right Briefly →       Platform angle: Increases a little bit
+  │                         (small permanent change)
+  ├─── 0s: 10°
+  ├─── 0.2s: 15°  ← tilted a bit more
+  └─── 1s: 15°    ← stays at new angle
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 📍 POSITION CONTROL (DIRECT) - NOT RECOMMENDED                         │
+└─────────────────────────────────────────────────────────────────────────┘
+
+What you do:                What platform does:
+
+Stick Center       →        Platform angle: IMMEDIATELY goes to 0°
+  │                         (snaps to level)
+  └─── always: 0°
+
+Stick Full Right   →        Platform angle: IMMEDIATELY at maximum
+  │                         (jumps there instantly)
+  └─── always: 45° (max)
+
+Release to Center  →        Platform angle: SNAPS back to 0°
+  │                         (fights you!)
+  ├─── 0s: 45° (was tilted)
+  └─── 0.01s: 0°  ← BANG! back to center
+
+Hold at 50%        →        Platform angle: Stays at half angle
+  │                         (but hand gets tired)
+  └─── always: 22.5°
+
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                        MARBLE BALANCING EXAMPLE                            ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+Scenario: Marble is rolling too far to the right. You want to stop it.
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ ✅ VELOCITY CONTROL (Good!)                                             │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Step 1: Push stick RIGHT (same direction marble is rolling)
+        → Platform tilts right to "catch" the marble
+        → Marble slows down as platform slopes toward it
+
+Step 2: Ease stick back to center
+        → Platform stops tilting
+        → Platform stays at current angle
+
+Step 3: Observe marble
+        → If still moving, repeat
+        → Platform stays where you put it
+
+Step 4: Want to return to level?
+        → Gently push stick LEFT
+        → Watch angle display reach 0°
+        → Center stick to hold at level
+
+Result: ✅ You have full control, marble behaves predictably
+
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│ ❌ POSITION CONTROL (Bad!)                                              │
+└─────────────────────────────────────────────────────────────────────────┘
+
+Step 1: Push stick RIGHT to catch marble
+        → Platform IMMEDIATELY maxes out right
+        → Marble gets THROWN to the right even faster!
+
+Step 2: Release stick in panic
+        → Platform SNAPS back to center
+        → Marble gets thrown LEFT now
+
+Step 3: Try to catch it going left
+        → Push stick LEFT
+        → Platform maxes out LEFT
+        → Marble flies off the left side
+
+Result: ❌ Marble is on the floor, you're frustrated
+
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                         REAL-WORLD ANALOGIES                               ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+VELOCITY CONTROL is like:
+  🚗 Steering wheel - turning it changes your direction over time
+  🎮 Minecraft flying - holding forward makes you move continuously
+  🚁 Drone controls - stick controls rate of rotation
+  📱 Tilt-to-scroll - tilting phone scrolls continuously
+
+POSITION CONTROL is like:
+  🖱️ Mouse cursor - pointer goes exactly where you point
+  📐 Drawing with a stylus - direct 1:1 positioning
+  🎯 Laser pointer - dot is exactly where you aim
+  👆 Touchscreen - touch goes exactly to that spot
+
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                      WHICH MODE SHOULD I USE?                              ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+Use VELOCITY CONTROL if:
+  ✅ Balancing a marble/ball on a platform
+  ✅ Want smooth, gradual movements
+  ✅ Need to make tiny adjustments
+  ✅ Platform should "remember" its angle
+  ✅ Controlling something with inertia/momentum
+
+Use POSITION CONTROL if:
+  ⚠️  Testing response curves
+  ⚠️  Want 1:1 mapping for some reason
+  ⚠️  Demonstrating the hardware
+  ⚠️  Platform should always return to center
+  (Honestly: almost never for marble balancing!)
+
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                        UNDERSTANDING THE CONTROLS                          ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+In VELOCITY mode, the joystick is asking:
+
+  "How fast should the platform tilt?"
+
+  Stick Position:          Platform does:
+  ───────────────          ──────────────
+  Far right (100%)    →    Tilts right at MAXIMUM speed
+  Half right (50%)    →    Tilts right at HALF speed
+  Slight right (10%)  →    Tilts right SLOWLY
+  Center (0%)         →    STOPS moving (stays where it is)
+  Slight left (-10%)  →    Tilts left SLOWLY
+  Half left (-50%)    →    Tilts left at HALF speed
+  Far left (-100%)    →    Tilts left at MAXIMUM speed
+
+
+In POSITION mode, the joystick is asking:
+
+  "Where should the platform be?"
+
+  Stick Position:          Platform does:
+  ───────────────          ──────────────
+  Far right (100%)    →    Goes to MAX angle right
+  Half right (50%)    →    Goes to HALF of max angle right
+  Slight right (10%)  →    Goes to 10% of max angle right
+  Center (0%)         →    Goes to LEVEL (0°)
+  Any position        →    JUMPS to that angle immediately
+
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                            QUICK TEST                                      ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+To verify you're in VELOCITY mode:
+
+  1. Launch the program
+  2. Platform should show 0.0° roll, 0.0° pitch
+  3. Push stick RIGHT and HOLD it there
+  4. Watch the Roll value at the top
+
+  ✅ VELOCITY MODE: Number keeps increasing (5°, 10°, 15°, 20°...)
+  ❌ POSITION MODE: Number jumps to max and stays (45°, 45°, 45°...)
+
+  5. Release stick to center
+  6. Watch the Roll value
+
+  ✅ VELOCITY MODE: Number STAYS where it was (stays at 20°)
+  ❌ POSITION MODE: Number RETURNS to zero (goes back to 0°)
+
+
+If you see VELOCITY mode behavior, you're ready for marble balancing! 🎯
