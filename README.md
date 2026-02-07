@@ -16,7 +16,7 @@ A complete system that maps Xbox controller input to Arduino-controlled platform
 run.bat
 
 # Option 2: Clone from git
-git clone https://github.com/YOUR_USERNAME/xbox-arduino-platform-mapper.git
+git clone https://github.com/Adam-Jean/xbox-arduino-platform-mapper.git
 cd xbox-arduino-platform-mapper
 run.bat
 ```
@@ -25,7 +25,7 @@ run.bat
 
 ```bash
 # Clone or download
-git clone https://github.com/YOUR_USERNAME/xbox-arduino-platform-mapper.git
+git clone https://github.com/Adam-Jean/xbox-arduino-platform-mapper.git
 cd xbox-arduino-platform-mapper
 
 # Make executable and run
@@ -37,7 +37,7 @@ chmod +x run.sh
 
 ```bash
 # Clone or download
-git clone https://github.com/YOUR_USERNAME/xbox-arduino-platform-mapper.git
+git clone https://github.com/Adam-Jean/xbox-arduino-platform-mapper.git
 cd xbox-arduino-platform-mapper
 
 # Add user to dialout group (for serial port access)
@@ -584,7 +584,7 @@ Free to use, modify, and distribute for any purpose including commercial use.
 ## Support
 
 **Issues or questions?**
-- GitHub Issues: https://github.com/YOUR_USERNAME/xbox-arduino-platform-mapper/issues
+- GitHub Issues: https://github.com/Adam-Jean/xbox-arduino-platform-mapper/issues
 - Check [HACKATHON_QUICK_START.md](HACKATHON_QUICK_START.md) for common problems
 - Review troubleshooting section above
 

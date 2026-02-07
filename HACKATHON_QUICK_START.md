@@ -14,7 +14,7 @@
 
 ```cmd
 # 1. Clone or download project
-git clone https://github.com/YOUR_USERNAME/xbox-arduino-platform-mapper.git
+git clone https://github.com/Adam-Jean/xbox-arduino-platform-mapper.git
 cd xbox-arduino-platform-mapper
 
 # 2. Run (creates venv automatically)
@@ -25,7 +25,7 @@ run.bat
 
 ```bash
 # 1. Clone or download project
-git clone https://github.com/YOUR_USERNAME/xbox-arduino-platform-mapper.git
+git clone https://github.com/Adam-Jean/xbox-arduino-platform-mapper.git
 cd xbox-arduino-platform-mapper
 
 # 2. Make script executable
@@ -39,7 +39,7 @@ chmod +x run.sh
 
 ```bash
 # 1. Clone or download project
-git clone https://github.com/YOUR_USERNAME/xbox-arduino-platform-mapper.git
+git clone https://github.com/Adam-Jean/xbox-arduino-platform-mapper.git
 cd xbox-arduino-platform-mapper
 
 # 2. Add user to dialout group (needed for serial access)
@@ -213,7 +213,7 @@ sudo usermod -a -G dialout $USER
 ## Emergency Contacts
 
 **Issues?**
-- GitHub Issues: https://github.com/YOUR_USERNAME/xbox-arduino-platform-mapper/issues
+- GitHub Issues: https://github.com/Adam-Jean/xbox-arduino-platform-mapper/issues
 - Documentation: See README.md
 
 ## Time-Saving Tips
